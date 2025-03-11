@@ -1,0 +1,79 @@
+@import "../Header/Header.scss";
+.contact {
+  background: $background;
+  padding: 3rem 2rem;
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+  }
+  .contact-des {
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .contact-form {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 60rem;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    .name,
+    .email,
+    .msg {
+      font-size: medium;
+      width: 100% !important;
+      max-width: 40rem;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      background: rgb(40, 40, 40);
+      font-family: $font-family;
+      letter-spacing: 1px;
+    }
+    .submit-btn {
+      cursor: pointer;
+      border: 0;
+      border-radius: 0;
+      position: relative;
+      color: #bf0404;
+      background: #0d0d0d;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 2.5rem;
+      border-radius: 3rem;
+      font-family: "Lato", sans-serif;
+      border: 1px solid #bf0404;
+      font-weight: 600;
+      transition: all 0.3s;
+      letter-spacing: 1.5px;
+      margin-top: 2rem;
+      &:hover {
+        background-color: $btn-hover;
+        color: $color;
+      }
+    }
+  }
+  .links {
+    text-align: center;
+    margin-top: 2rem;
+    .link-img {
+      width: 3rem;
+      margin: auto;
+      margin: 0 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      &:hover {
+        box-shadow: 0 4px 15px 0 red;
+      }
+    }
+  }
+}

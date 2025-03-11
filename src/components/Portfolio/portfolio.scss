@@ -1,0 +1,122 @@
+@import "../Header/Header.scss";
+
+.portfolio {
+  background: $background;
+  padding-bottom: 2rem;
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    color: $color-hover;
+  }
+  .desTitle {
+    display: block;
+    color: #fff;
+    text-align: center;
+    max-width: 55vw;
+    margin: 2rem auto;
+  }
+  .portfolio-project {
+    max-width: 80rem;
+    padding: 0 2rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 4rem;
+    row-gap: 4rem;
+    .mockup-img {
+      width: 100%;
+      height: 100%;
+    }
+    .project {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      .text-project {
+        position: absolute;
+        bottom: -24px;
+        width: 100%;
+        transition: all 0.3s;
+        background: #ffffff89;
+        padding: 0.2rem 0;
+        h4 {
+          margin: 0;
+          font-size: 1.5rem;
+          color: #3764e4;
+          padding: 0 1rem;
+          text-shadow: 1px 1px 1px #fff;
+          &.ae {
+            color: #000;
+          }
+          &.cvt {
+            color: #003a74;
+          }
+          &.v2c {
+            color: rgb(255, 215, 0);
+          }
+        }
+        .tech {
+          display: block;
+          color: #fff;
+          font-size: 1rem;
+          padding: 0 1rem;
+        }
+        a {
+          font-size: 1rem;
+          text-decoration: none;
+          cursor: pointer;
+          color: $background;
+          font-weight: 500;
+          padding: 0 1rem;
+        }
+        .big {
+          color: #193e74;
+        }
+        .camera {
+          color: #ee2028;
+        }
+      }
+      &:hover {
+        .text-project {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 995px) {
+  .portfolio {
+    .desTitle {
+      max-width: 80vw;
+    }
+    .portfolio-project {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2rem;
+      row-gap: 2rem;
+      .project {
+        .text-project {
+          bottom: -22px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .portfolio {
+    .desTitle {
+      max-width: 100%;
+      padding: 0 2rem;
+      text-align: justify;
+    }
+    .portfolio-project {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      column-gap: 2rem;
+      row-gap: 2rem;
+      .project {
+        .text-project {
+          bottom: -22px;
+        }
+      }
+    }
+  }
+}

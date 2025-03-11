@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+$background-btn: #0d0d0d;
+$btn-hover: #bf0404;
+$btn-color: #bf0404;
+$border-color-btn: #bf0404;
+$background: #0d0d0d;
+$color: #fff;
+$color-hover: #bf0404;
+$font-family: "Lato", sans-serif;
+
+//Nav
+.navHeader {
+  background: $background;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .navbar {
+    max-width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      width: 4rem;
+      animation: App-logo-spin infinite 20s linear;
+    }
+    .desktopMenuListen {
+      margin: 1rem;
+      cursor: pointer;
+      list-style: none;
+      text-decoration: none;
+      color: $color;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: medium;
+      transition: all 0.2s;
+      padding: 0 0 0.5rem 0;
+      position: relative;
+      font-family: $font-family;
+      letter-spacing: 1.5px;
+      &::after {
+        content: "";
+        height: 2px;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #bf0404;
+        transition: all 0.2s;
+      }
+      &:hover {
+        color: $color-hover;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    .btnMenumobile,
+    .removeBtn {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      display: none;
+      img {
+        width: 2rem;
+      }
+    }
+  }
+}
+.header {
+  background: $background;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  .mainContentHeader {
+    max-width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 8rem;
+    .mainImg {
+      position: relative;
+      width: 32vw;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 25px solid $btn-color;
+      cursor: pointer;
+      transition: 0.2s linear;
+    }
+    .contentHeader {
+      h1 {
+        font-size: 6rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        animation: fadeUP 0.6s;
+        span {
+          color: $color-hover;
+        }
+      }
+      h3 {
+        font-size: 4rem;
+        color: #fff;
+        margin-top: 1rem;
+        span {
+          color: $color-hover;
+        }
+        animation: fadeUP 0.7s;
+      }
+      .text {
+        color: #fff;
+      }
+
+      .btnHeader {
+        animation: fadeUP 0.9s;
+        cursor: pointer;
+        border: 0;
+        border-radius: 0;
+        position: relative;
+        color: $btn-color;
+        background: $background-btn;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7rem 2rem;
+        border-radius: 3rem;
+        font-family: $font-family;
+        border: 1px solid $border-color-btn;
+        font-weight: 600;
+        transition: all 0.3s;
+        letter-spacing: 1.5px;
+        margin-top: 2rem;
+        .chat-btn {
+          width: 0.7rem;
+          margin-left: 0.5rem;
+        }
+        &:hover {
+          background-color: $btn-hover;
+          color: $color;
+        }
+      }
+    }
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 1000px) {
+  .header {
+    .mainContentHeader {
+      gap: 4rem;
+    }
+  }
+}
+@media (max-width: 995px) {
+  .header {
+    .mainContentHeader {
+      flex-direction: column;
+      margin: -1px 2rem 0;
+      .mainImg {
+        width: 100%;
+      }
+      .contentHeader {
+        h1 {
+          font-size: 5rem;
+        }
+        h3 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .navHeader {
+    .navbar {
+      .desktopMenu {
+        overflow: hidden;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: $background;
+        top: 0;
+        left: 0;
+        width: 0;
+        z-index: 99;
+        height: 100vh;
+        transform: translateX(-1000px);
+        transition: all 0.6s;
+        padding: 2rem;
+        &.active {
+          transform: translateX(-3rem);
+          width: 100vw;
+        }
+        a {
+          width: fit-content;
+          margin-left: auto;
+        }
+      }
+      .btnMenumobile,
+      .removeBtn {
+        display: block;
+      }
+      .removeBtn {
+        text-align: right;
+        padding-right: 1rem;
+        img {
+          width: 1.5rem;
+        }
+      }
+    }
+  }
+}
+@keyframes fadeUP {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
