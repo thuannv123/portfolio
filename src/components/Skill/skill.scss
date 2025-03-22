@@ -9,6 +9,8 @@
   .skill {
     max-width: 90rem;
     margin: auto;
+    animation: scale;
+    animation-timeline: view();
     h3 {
       font-size: 3rem;
       text-align: center;

@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./contact.scss";
 import emailjs from "@emailjs/browser";
 import fb from "../../assets/img/facebook.png";
-import insta from "../../assets/img/instagram.png";
+import git from "../../assets/img/github.png";
 import mail from "../../assets/img/mail.png";
 
 export const Contact = () => {
@@ -56,9 +56,15 @@ export const Contact = () => {
         </button>
       </form>
       <div className="links">
-        <img src={fb} alt="" className="link-img" />
-        <img src={insta} alt="" className="link-img" />
-        <img src={mail} alt="" className="link-img" />
+        <a href="https://www.facebook.com/thuan0602/">
+          <img src={fb} alt="" className="link-img" />
+        </a>
+        <a href="mailto:thuannv06022001@gmail.com">
+          <img src={mail} alt="" className="link-img" />
+        </a>
+        <a href="https://github.com/thuannv123/">
+          <img src={git} alt="" className="link-img" />
+        </a>
       </div>
     </div>
   );
