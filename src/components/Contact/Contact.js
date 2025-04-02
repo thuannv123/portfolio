@@ -37,13 +37,13 @@ export const Contact = () => {
           type="text"
           className="name"
           placeholder="Họ và tên"
-          name="user_name"
+          name="from_name"
         />
         <input
           type="email"
           className="email"
           placeholder="Email"
-          name="user_email"
+          name="from_email"
         />
         <textarea
           name="message"

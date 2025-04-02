@@ -23,7 +23,7 @@ $font-family: "Lato", sans-serif;
     justify-content: space-between;
     .logo {
       width: 4rem;
-      animation: App-logo-spin infinite 20s linear;
+      // animation: App-logo-spin infinite 20s linear;
     }
     .desktopMenuListen {
       margin: 1rem;
@@ -218,11 +218,11 @@ $font-family: "Lato", sans-serif;
     }
   }
 }
-@keyframes fadeUP {
-  0% {
-    transform: translateY(500px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+// @keyframes fadeUP {
+//   0% {
+//     transform: translateY(500px);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
